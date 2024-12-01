@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento Empresarial</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gerenciamento Empresarial</h1>
+        <nav>
+            <ul>
+                <li><a href="#funcionarios">Cadastro de Funcionários</a></li>
+                <li><a href="#compras">Cadastro de Compras</a></li>
+                <li><a href="#produtos">Cadastro de Produtos</a></li>
+                <li><a href="#caixa">Fluxo de Caixa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="funcionarios">
+            <h2>Cadastro de Funcionários</h2>
+            <form id="form-funcionarios">
+                <label for="nome-funcionario">Nome:</label>
+                <input type="text" id="nome-funcionario" required>
+
+                <label for="cargo-funcionario">Cargo:</label>
+                <input type="text" id="cargo-funcionario" required>
+
+                <button type="button" onclick="cadastrarFuncionario()">Cadastrar</button>
+            </form>
+            <ul id="lista-funcionarios"></ul>
+        </section>
+
+        <section id="compras">
+            <h2>Cadastro de Compras</h2>
+            <form id="form-compras">
+                <label for="item-compra">Item:</label>
+                <input type="text" id="item-compra" required>
+
+                <label for="valor-compra">Valor:</label>
+                <input type="number" step="0.01" id="valor-compra" required>
+
+                <button type="button" onclick="cadastrarCompra()">Cadastrar</button>
+            </form>
+            <ul id="lista-compras"></ul>
+        </section>
+
+        <section id="produtos">
+            <h2>Cadastro de Produtos</h2>
+            <form id="form-produtos">
+                <label for="nome-produto">Nome:</label>
+                <input type="text" id="nome-produto" required>
+
+                <label for="quantidade-produto">Quantidade:</label>
+                <input type="number" id="quantidade-produto" required>
+
+                <button type="button" onclick="cadastrarProduto()">Cadastrar</button>
+            </form>
+            <ul id="lista-produtos"></ul>
+        </section>
+
+        <section id="caixa">
+            <h2>Fluxo de Caixa</h2>
+            <p>Total em Caixa: R$ <span id="total-caixa">0.00</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Gerenciamento Empresarial</p>
+    </footer>
+</body>
+</html>
